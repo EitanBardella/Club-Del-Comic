@@ -1,20 +1,20 @@
-
 import './App.css'
-import NavBar from './components/NavBar'
-import Prueba from './components/Prueba'
-import ItemListContainer from './components/ItemListContainer'
-//Componente Padre renderiza componentes hijos
+import NavBar  from './components/NavBar'
+import Footer from './components/Footer'
+import  Tarjetas  from './components/Tarjetas'
+import "bootstrap/dist/css/bootstrap.min.css" 
+
+
+//Componente Padre renderiza coBmponentes hijos
 function App() {
   
   return (
     <>
-    <div>
-      <NavBar/>
-      <Prueba/>
+    <NavBar/>
+    <div className='app'>
+      <Tarjetas/>
     </div>
-    <div>
-      <h1><ItemListContainer greeting={"Bienvenidos"}/></h1>
-    </div>
+    <Footer/>
     </>
   )
 }

@@ -1,32 +1,27 @@
+import "./NavBar.css" 
+import logo from "../assets/club-comic-logo-1.png"
+import CartWidget from "./CartWidget"
 
-import CartWidget from './CartWidget'
+
 
 const NavBar = () => {
 
-    return (
-        <nav>
-            <div>
-                <div>
-                    <span>Club del Comic</span>
-                </div>
-                <ul>
-                    <a href="">
-                        <li>HOME</li>
-                    </a>
-                    <a href="">
-                        <li>Mangas y Comics</li>
-                    </a>
-                    <a href="">
-                        <li>Merchandising</li>
-                    </a>
-                    <a href="">
-                        <li>Contactos</li>
-                    </a>
-                    <CartWidget cantidad = {1} />
+return (
+    <>
+        <header>
+            <img src={logo}/>
+            <nav>
+                <ul className="nav_links">
+                    <li className="li"><a className="navegacion" target="_self" href="./html/comicymanga.html">Comic y manga</a></li>
+                    <li className="li"><a className="navegacion" target="_self" href="./html/merchandising.html">Merchandising</a></li>
+                    <li className="li"><a className="navegacion" target="_self" href="./html/faq.html">FAQ</a></li>
+                    <li className="li"><a id="showCart" className="navegacion" target="_self" href="#"><CartWidget cantidad={1}/></a></li>
                 </ul>
-            </div>
-        </nav>
-    )
+            </nav>
+            <a  target="_self" className="cta" href="./html/contactos.html"><button>Contacto</button></a>
+        </header>
+    </>
+)
 }
 
 export default NavBar

@@ -1,18 +1,35 @@
-*{
+@charset "UTF-8";
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container {
+/*HEADER*/
+header {
     background-color: #24252a;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 125px;
 }
-
-.home  {
+/* @media screen and (max-width: 680px) {
+    header {
+    flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    header {
+    width: 100%;
+    flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    header nav {
+    padding: 5 5px;
+    }
+} */
+header .li {
     font-family: "Montserrat";
     font-family: sans-serif;
     font-weight: 500;
@@ -20,9 +37,7 @@
     color: #edf0f1;
     text-decoration: none;
 }
-
-
-#contacto{
+header .navegacion {
     font-family: "Montserrat";
     font-family: sans-serif;
     font-weight: 500;
@@ -30,8 +45,32 @@
     color: #edf0f1;
     text-decoration: none;
 }
-
-/* header button {
+header .logo {
+    cursor: pointer;
+}
+header .nav_links {
+    list-style: none;
+}
+header .nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+header .nav_links li a {
+    color: #fdfdfd;
+    transition: all 0.3s ease 0s;
+}
+header .nav_links li a:hover {
+    color: #0088a9;
+}
+header .cta {
+    font-family: "Montserrat";
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header button {
     padding: 9px 25px;
     background-color: rgb(0, 136, 169);
     border: none;
@@ -45,4 +84,9 @@ header button:hover {
     box-shadow: 0 0 45px #0088a9;
     box-shadow: 0 0 75px #0088a9;
 }
-*/
+@media screen and (max-width: 550px) {
+    header button {
+    padding: 5px;
+    font-size: 16px;
+    }
+}

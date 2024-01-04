@@ -1,0 +1,15 @@
+.container{
+    background-color: #9aadbf;
+    border-right: solid 7px black;
+    border-left: solid 7px black;
+    width: 1150px;
+
+    
+}
+.col-md-4{
+    padding: 15px;
+}
+
+.col-md-4 p{
+    font-size: 23px;
+}

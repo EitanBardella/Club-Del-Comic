@@ -1,0 +1,27 @@
+
+[
+    {
+        "id":1,
+        "nombre":"Chainsawman Tomo 1",
+        "precio": 4000,
+        "imagen": "../assets/ChainsawmanTomo1.jpg"
+    },
+    {
+        "id":2,
+        "nombre":"Chainsawman Tomo 1",
+        "precio": 4000 ,
+        "imagen": "../assets/ChainsawmanTomo1.jpg"
+    },
+    {
+        "id":3,
+        "nombre":"Chainsawman Tomo 1",
+        "precio": 4000,
+        "imagen": "../assets/ChainsawmanTomo1.jpg"
+    },
+    {
+        "id":4,
+        "nombre":"Chainsawman Tomo 1",
+        "precio": 4000 ,
+        "imagen": "../assets/ChainsawmanTomo1.jpg"
+    }
+]

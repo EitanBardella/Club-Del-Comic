@@ -1,7 +1,7 @@
 import './App.css'
 import NavBar  from './components/NavBar'
 import Footer from './components/Footer'
-import  Tarjetas  from './components/Tarjetas'
+import  ItemListContainer  from './components/Productos/ItemListContainer'
 import "bootstrap/dist/css/bootstrap.min.css" 
 
 
@@ -12,7 +12,7 @@ function App() {
     <>
     <NavBar/>
     <div className='app'>
-      <Tarjetas/>
+      <ItemListContainer/>
     </div>
     <Footer/>
     </>

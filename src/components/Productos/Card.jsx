@@ -1,22 +1,21 @@
 import Button from 'react-bootstrap/Button';
 import "./Card.css"
-const Card = ({titulo, imagen, precio}) => {
+import "../../data/product.json"
+
+
+const Card = ({imagen, titulo, precio}) => {
   return (
     <div className="card">
-      <img src={imagen} alt="" />
+      <img src={imagen} alt={titulo} />
       <div className="card-body">
         <h4 className="card-tittle">{titulo}</h4>
-        <p className="card-text">{precio}</p>
+        <p className="card-text">{precio}$</p>
         <Button variant="danger" >AGREGAR AL CARRITO</Button>
       </div>
     </div>
   )
 }
 
-// Card.propTypes={
-//   nombre: PropTypes.string.isRequired,
-//   precio: PropTypes.number.isRequired,
-//   imagen: PropTypes.string.isRequired,
-// }
+
 
 export default Card

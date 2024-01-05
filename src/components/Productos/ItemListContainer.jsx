@@ -10,19 +10,15 @@ const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
 
-    // const pedirProductos = () =>{
-    //     return new Promise((resolve, reject) => {
-    //         resolve(data)
-    //     })
-    // }
-    
-
 
     useEffect(() => {
-        pedirProductos()
+        setTimeout(() => {
+            pedirProductos()
             .then((rta)=>{
                 setProductos(rta);
             })
+        }, 2000);
+        
     }, [])
 
     return (
@@ -30,7 +26,7 @@ const ItemListContainer = () => {
             {productos.length > 0 ? (
                 <ItemList productos={productos}></ItemList>
             ) : (
-                <p>Cargando productos...</p>
+                <p className="cargando">Cargando productos...</p>
             )}
         </div>
     );

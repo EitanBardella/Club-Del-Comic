@@ -1,12 +1,12 @@
 import Button from 'react-bootstrap/Button';
 
 const ItemDetail = ({Item}) => {
-
+    if (!Item){ return <div>Cargando Producto</div>}
     console.log(Item)
 
     return (
-        <div className="container">
-            { Item && (
+        <div className="container" key={(Item.id)} >
+            {
                 <>
                     <h1> {Item.nombre} </h1>
                     <div>
@@ -18,7 +18,7 @@ const ItemDetail = ({Item}) => {
                     <Button variant="danger" >AGREGAR AL CARRITO</Button>
                     </div>
                 </>
-            )}
+            }
         </div>
     )
 }

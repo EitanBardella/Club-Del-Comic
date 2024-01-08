@@ -1,26 +1,29 @@
 import { useEffect, useState } from "react";
 import pedirItemPorId from "../../helpers/PedirProducto"
 import ItemDetail from "./ItemDetail";
+import {useParams} from "react-router-dom"
 
 
 const ItemDetailContainer = ({ItemId}) => {
     
-    const [Item, setItem] = useState({}) 
+    const [Item, setItem] = useState({})
+    const id = useParams().id;
+    console.log(id)
     
     useEffect(() => {
         setTimeout(() => {
-            pedirItemPorId(ItemId)
+            pedirItemPorId(Number(id))
                 .then((rta) => {
                     console.log(rta)
                     setItem(rta)
                 })
         }, 2000);
-    }, [ItemId])
+    }, [id])
 
     return (
         <div>
 
-            {Item && <ItemDetail Item= {2}  />}
+            {Item && <ItemDetail Item= {Item}  />}
 
         </div>
     )

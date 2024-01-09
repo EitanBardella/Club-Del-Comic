@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Button from 'react-bootstrap/Button';
+import "./Prueba.css"
 
 
 const Prueba = () => {
@@ -13,11 +15,13 @@ const Prueba = () => {
         setContador(contador-1);
     }
     
+
+
     return (
-    <div>
-        <p>Carrito {contador} </p>
-        <button onClick={sumar} > Agregar </button>
-        <button onClick={restar} > Restar </button>
+    <div className="Container">
+        <Button variant="light" onClick={sumar} > Agregar </Button>
+        {/* <p> {contador} </p> */}
+        <Button variant="light" onClick={restar} > Restar </Button>
     </div>
     )
 }

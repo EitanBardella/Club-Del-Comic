@@ -12,16 +12,16 @@ const ItemDetailContainer = ({ItemId}) => {
     
     useEffect(() => {
         setTimeout(() => {
-            pedirItemPorId(Number(id))
+            pedirItemPorId(Number(ItemId))
                 .then((rta) => {
                     console.log(rta)
                     setItem(rta)
                 })
         }, 2000);
-    }, [id])
+    }, [ItemId])
 
     return (
-        <div>
+        <div className="">
 
             {Item && <ItemDetail Item= {Item}  />}
 

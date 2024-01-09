@@ -1,0 +1,11 @@
+.btns{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Container{
+    display: grid;
+    grid-template-columns: repeat(2, 0.35fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

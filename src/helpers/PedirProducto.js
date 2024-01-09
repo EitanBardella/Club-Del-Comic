@@ -1,8 +1,7 @@
-import { element } from "prop-types"
 import data from "../data/product.json"
 
 const pedirProductos = () =>{
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(
             () => {
                 resolve(data)

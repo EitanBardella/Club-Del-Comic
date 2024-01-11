@@ -21,8 +21,8 @@ function App() {
       <div className='app'>
         <Routes>
           <Route path="/" element= {<ItemListContainer/>} />
-          <Route path="/productos/" element= {<ItemDetailContainer/>} />
-          <Route path="/item/:id" element= {<ItemDetailContainer  />} />
+          <Route path="/productos/:categoria" element= {<ItemListContainer/>} />
+          <Route path="/item/:id" element= {<ItemDetailContainer itemId= {2} />} />
           <Route path="/contactos" element= {<Contactos/>} />
           <Route path="/faq" element= {<Faq/>} />
         </Routes>

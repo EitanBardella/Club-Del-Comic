@@ -1,9 +1,10 @@
+
+
 .container{
     background-color: #9aadbf;
     border-right: solid 7px black;
     border-left: solid 7px black;
     width: 1150px;
-
     
 }
 .col-md-4{
@@ -14,8 +15,14 @@
     font-size: 23px;
 }
 
-.cargando{
+.cargandoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     font-size: 50px;
+    font-weight: 400;
     color: #000;
-    
 }
+

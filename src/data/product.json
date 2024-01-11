@@ -26,13 +26,27 @@
         "nombre":"Funko Killua",
         "precio": 4000 ,
         "imagen": "../assets/FunkoKillua.jpg",
-        "categoria": "merch"
+        "categoria": "merchandising"
     },
     {
         "id":5,
         "nombre":"Funko Wall-e",
         "precio": 4000,
         "imagen": "../assets/FunkoWall-e.jpg",
-        "categoria": "comic_manga"
+        "categoria": "merchandising"
+    },
+    {
+        "id":6,
+        "nombre":"Funko Wall-e",
+        "precio": 4000,
+        "imagen": "../assets/FunkoWall-e.jpg",
+        "categoria": "merchandising"
+    },
+    {
+        "id":7,
+        "nombre":"Funko Wall-e",
+        "precio": 4000,
+        "imagen": "../assets/FunkoWall-e.jpg",
+        "categoria": "merchandising"
     }
 ]

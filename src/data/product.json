@@ -4,49 +4,56 @@
         "id":1,
         "nombre":"Naruto Tomo 1",
         "precio": 4000,
-        "imagen": "../assets/NarutoTomo1.jpg",
+        "imagen": "public/NarutoTomo1.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "comic_manga"
     },
     {
         "id":2,
         "nombre":"Batman 1",
         "precio": 4000 ,
-        "imagen": "../assets/BatmanComicPortada.jpg",
+        "imagen": "public/BatmanComicPortada.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "comic_manga"
     },
     {
         "id":3,
         "nombre":"Batman 2",
         "precio": 4000,
-        "imagen": "../assets/BatmanComicPortada2.jpg",
+        "imagen": "public/BatmanComicPortada2.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "comic_manga"
     },
     {
         "id":4,
         "nombre":"Funko Killua",
         "precio": 4000 ,
-        "imagen": "../assets/FunkoKillua.jpg",
+        "imagen": "public/FunkoKillua.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "merchandising"
     },
     {
         "id":5,
         "nombre":"Funko Wall-e",
         "precio": 4000,
-        "imagen": "../assets/FunkoWall-e.jpg",
+        "imagen": "public/FunkoWall-e.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "merchandising"
     },
     {
         "id":6,
         "nombre":"Funko Wall-e",
         "precio": 4000,
-        "imagen": "../assets/FunkoWall-e.jpg",
+        "imagen": "public/FunkoWall-e.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "merchandising"
     },
     {
         "id":7,
         "nombre":"Funko Wall-e",
         "precio": 4000,
-        "imagen": "../assets/FunkoWall-e.jpg",
+        "imagen": "public/FunkoWall-e.jpg",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
         "categoria": "merchandising"
     }
 ]

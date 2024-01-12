@@ -1,5 +1,5 @@
 import Card from "./Card"
-import img from "../../assets/NarutoTomo1.jpg"
+
 
 const ItemList = ( {productos}) => {
     return (

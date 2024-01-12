@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import "./Card.css"
 import "../../data/product.json"
 import {Link} from "react-router-dom"
-import Prueba from "../Prueba"
 
 
 const Card = ({producto}) => {
@@ -13,7 +12,6 @@ const Card = ({producto}) => {
         <h4 className="card-tittle"><Link to={`/Item/${producto.id} `} className='Link'>{producto.nombre}</Link></h4>
         <p className="card-text">{producto.precio}$</p>
         <Button variant="danger" >AGREGAR AL CARRITO</Button>
-        <Prueba/>
       </div>
     </div>
   )

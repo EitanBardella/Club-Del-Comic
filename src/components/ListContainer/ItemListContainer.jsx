@@ -1,21 +1,17 @@
 import "./ItemListContainer.css"
-// import data from "../../data/product.json"
 import { useEffect, useState } from "react"
 import  pedirProductos  from "../../helpers/PedirProducto"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
 import {ClockLoader} from "react-spinners"
 
-const ItemListContainer = () => {
-    //Logica js
-    //Promesa para traer objetos
-
+const ItemListContainer = () => {  
     const [productos, setProductos] = useState([])
     const [cargando, setCargando] = useState(true);
 
     const {categoria} = useParams()
-
     console.log(categoria)
+    
     useEffect(() => {
         setTimeout(() => {
             pedirProductos()
@@ -39,22 +35,7 @@ const ItemListContainer = () => {
         
     }, [categoria])
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const data = await pedirProductos();
-    //             setProductos(data);
-    //         } catch (error) {
-    //             console.error("Error fetching data: ", error);
-    //         }
-    //         };
-        
-    //         fetchData();
-    //     }, []);
-
     return (
-        //Abu
-        //Contenedor de la lista de productos que a pasa el .json a traves del productos del useState
         <div className="container d-flex justify-content-center align-items-center">
             {productos.length > 0 ? (
                 <ItemList productos={productos}></ItemList>

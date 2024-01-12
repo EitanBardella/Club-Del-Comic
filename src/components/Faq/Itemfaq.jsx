@@ -1,6 +1,6 @@
 import "./Itemfaq.css"
 import { useState, useEffect, useRef } from "react"
-import Chevron from "../../assets/chevron.svg"
+import Chevron from "../../../public/chevron.svg"
 
 const Itemfaq = ( {pregunta, respuesta} ) => {
     const [toggle, setToggle] = useState(false)

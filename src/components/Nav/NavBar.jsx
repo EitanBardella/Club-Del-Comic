@@ -1,5 +1,5 @@
 import "./NavBar.css" 
-import logo from "../../assets/club-comic-logo-1.png"
+import logo from "../../../public/club-comic-logo-1.png"
 import CartWidget from "./CartWidget"
 import {Link} from "react-router-dom"
 

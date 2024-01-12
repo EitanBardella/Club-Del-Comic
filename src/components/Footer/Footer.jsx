@@ -1,5 +1,5 @@
 import "./Footer.css"
-import logo from "../../assets/club-comic-logo-1.png"
+import logo from "../../../public/club-comic-logo-1.png"
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi";

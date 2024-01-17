@@ -1,5 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import "./ItemDetail.css"
+import Contador from '../Contador/Contador';
+import img from "../../../public/NarutoTomo1.jpg"
 
 const ItemDetail = ({Item}) => {
     if (!Item){ return <div>Cargando Producto</div>}
@@ -11,14 +12,15 @@ const ItemDetail = ({Item}) => {
                     <h1 className='name'> {Item.nombre}</h1>
                     <div className='row'>
                         <div className='col' > 
-                            <img src={Item.imagen} alt="Hola" />
+                            <img className="img-detail" src={img} alt="" />
+                            {/* <img src={Item.imagen} alt="Hola" /> */}
                         </div>
-                        <div className='col'>
+                        <div className='col d-flex flex-column justify-content-center gap-35'>
                             <p className='descripcion'>{Item.descripcion}</p>
-                            <p className='precio'>{Item.precio}</p>
-                        </div>
-                        <div className='row-auto'>
-                            <Button variant="danger" className='btn'>AGREGAR AL CARRITO</Button>
+                            <p className='precio'>{Item.precio} $</p>
+                            <div className='cont'>
+                                <Contador Item = {Item} cartfontSize={30} AfontSize={25} />
+                            </div>
                         </div>
                     </div>
                 </>

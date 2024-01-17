@@ -1,0 +1,30 @@
+
+.Container{
+    display: grid;
+    grid-template-rows: repeat(2, 1 fr);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* .Container button{
+    font-size: 30px;
+} */
+
+.Container-btns{
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr); /* Tres columnas para los botones y la cantidad */
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Container-btns button{
+    border: solid #000;
+    /* font-size: 25px; */
+}
+
+.cantidad{
+    text-align: center;
+}

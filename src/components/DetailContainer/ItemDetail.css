@@ -1,17 +1,37 @@
 .name{
-    font-size: 50px;
+    font-size: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.img-detail{
+    border:solid 3px #000;
+    width: 427px;
+    height: 744px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gap-35{
+    gap: 35px;
 }
 
 .descripcion{
-    font-size: 19px;
+    font-size: 30px;
     text-align: center;
+    color: #000;
 }
 
 .precio{
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
+    color: #000;
 }
 
 .btn-add{
+    padding-bottom: 20px;
+}
+
+.cont{
     padding-bottom: 20px;
 }

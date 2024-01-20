@@ -28,7 +28,7 @@ return (
                 </ul>
             </nav>
 
-            <Link  target="_self" className="cta" to="/login"> {isOn ? (<div className="d-flex flex-column justify-content-center align-items-center user"><Link to="/perfil" target="_self" className="user-button" onClick={redirect} Username={Username} > {Username.usuario}</Link><img src="../../../public/DefaultPhoto.jpg" alt="DefaultPhot" className="DefaultPhoto" /></div>) : "Inicio de Sesion"} </Link>
+            <Link  target="_self" className="cta" to="/login"> {isOn ? (<div className="d-flex flex-column justify-content-center align-items-center user"><Link to="/perfil" target="_self" className="user-button" onClick={redirect} > {Username}</Link><img src="../../../public/DefaultPhoto.jpg" alt="DefaultPhot" className="DefaultPhoto" /></div>) : "Inicio de Sesion"} </Link>
             <Link  target="_self" className="cta" to="/contactos"><button className="Contact-button">Contacto</button></Link>
 
         </header>

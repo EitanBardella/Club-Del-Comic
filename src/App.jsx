@@ -19,12 +19,16 @@ function App() {
   const [isOn, setIsOn] = useState(false)
   //Estado para almacenar el nombre de usuario
   const [Username, setUsername] = useState("")
+  //Estado para almacenar el nombre real
+  const [nombre, setNombre] = useState("")
+  //Estado para almacenar el correo
+  const [mail, setMail] = useState("")
   //Ambos estados se pasan por props al NavBar y al Login para almacenar el dato y verificar si se inicio sesion
   return (
     <>
 
     <BrowserRouter>
-      <NavBar isOn= {isOn} Username={Username} />
+      <NavBar isOn= {isOn} Username={Username}  />
 
 
       <div className='app'>
@@ -34,9 +38,9 @@ function App() {
           <Route path="/item/:id" element= {<ItemDetailContainer />} />
           <Route path="/contactos" element= {<Contactos/>} />
           <Route path="/faq" element= {<Faq/>} />
-          <Route path="/login" element= {<Login setIsOn= {setIsOn} Username={Username} setUsername={setUsername} />} />
+          <Route path="/login" element= {<Login setIsOn= {setIsOn} setUsername={setUsername} setNombre={setNombre} setMail={setMail} />} />
           <Route path="/register" element= {<Register/>} />
-          <Route path="/perfil" element= {<UserProfile/>} />
+          <Route path="/perfil" element= {<UserProfile nombre = {nombre} mail = {mail} Username={Username} />} />
         </Routes>
       </div>
       <Footer/>

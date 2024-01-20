@@ -1,0 +1,62 @@
+
+.login-container{
+    background-color: #9aadbf;
+    border-right: solid 7px black;
+    border-left: solid 7px black;
+    width: 1150px;
+
+}
+.login-header {
+    margin: 50px;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+
+.login-form form input{
+    width: 100%;
+    font-style: italic;
+}
+
+.login-form form label {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #000;
+}
+
+
+
+.password-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-container input {
+    width: 100% /* Ajusta según sea necesario */
+}
+
+.password-input-container span {
+    position: absolute;
+    top: 50%;
+    right: 5px; /* Ajusta según sea necesario */
+    transform: translateY(-55%);
+    cursor: pointer;
+}
+
+.buttonCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonCenterI{
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 40px;
+}
+.register-form{
+    margin-top: 37px;
+    margin-bottom: 35px;
+}

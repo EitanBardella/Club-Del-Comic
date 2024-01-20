@@ -3,15 +3,18 @@ import "../../data/product.json"
 import {Link} from "react-router-dom"
 import Contador from '../Contador/Contador';
 
-
+//Le paso el array de productos a traves de una prop
 const Card = ({producto}) => {
+
+
   return (
     <div className="card">
-      <img src={producto.imagen} alt={producto.nombre} />
+      <img src={producto.imagen} alt={producto.nombre}  />
       <div className="card-body">
         <h4 className="card-tittle"><Link to={`/Item/${producto.id} `} className='Link'>{producto.nombre}</Link></h4>
         <p className="card-text">{producto.precio}$</p>
-        <Contador cartfontSize={20} AfontSize={18}/>
+        <Contador producto={producto} cartfontSize={20} AfontSize={18}/>
+        
       </div>
     </div>
   )

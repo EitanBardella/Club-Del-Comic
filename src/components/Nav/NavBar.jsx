@@ -1,13 +1,20 @@
 import "./NavBar.css" 
 import logo from "../../../public/club-comic-logo-1.png"
 import CartWidget from "./CartWidget"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 
 
 
-const NavBar = () => {
 
+const NavBar = ({isOn,Username}) => {
+    //
+    const navigate = useNavigate()
+    const redirect = ()=>{navigate('/perfil')}
+    console.log(Username)
+
+
+// Se pasan por props los dato si el usuario inicio o no la sesion para que se verifique la condicion y aparezca lo que corresponde
 return (
     <>
         <header>
@@ -20,7 +27,10 @@ return (
                     <li className="li"><Link id="showCart" className="navegacion" target="_self" to="#"><CartWidget cantidad={1}/></Link></li>
                 </ul>
             </nav>
-            <Link  target="_self" className="cta" to="/contactos"><button>Contacto</button></Link>
+
+            <Link  target="_self" className="cta" to="/login"> {isOn ? (<div className="d-flex flex-column justify-content-center align-items-center user"><Link to="/perfil" target="_self" className="user-button" onClick={redirect} Username={Username} > {Username.usuario}</Link><img src="../../../public/DefaultPhoto.jpg" alt="DefaultPhot" className="DefaultPhoto" /></div>) : "Inicio de Sesion"} </Link>
+            <Link  target="_self" className="cta" to="/contactos"><button className="Contact-button">Contacto</button></Link>
+
         </header>
     </>
 )

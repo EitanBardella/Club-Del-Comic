@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
                     console.log(rta)
                     setItem(rta)
                 })
-        }, 2000);
+        }, 500);
     }, [id])
 
     return (

@@ -7,15 +7,24 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Contactos from './components/Contactos/Contactos'
 import Faq from './components/Faq/Faq'
+import Login from "./components/SesionContainer/Login"
+import Register from "./components/SesionContainer/Register"
+import { useState } from 'react'
+import UserProfile from './components/SesionContainer/UserProfile'
 
 //Componente Padre renderiza coBmponentes hijos
 function App() {
   
+  //Revision para ver si el usuario esta o no Iniciado
+  const [isOn, setIsOn] = useState(false)
+  //Estado para almacenar el nombre de usuario
+  const [Username, setUsername] = useState("")
+  //Ambos estados se pasan por props al NavBar y al Login para almacenar el dato y verificar si se inicio sesion
   return (
     <>
 
     <BrowserRouter>
-      <NavBar/>
+      <NavBar isOn= {isOn} Username={Username} />
 
 
       <div className='app'>
@@ -25,6 +34,9 @@ function App() {
           <Route path="/item/:id" element= {<ItemDetailContainer />} />
           <Route path="/contactos" element= {<Contactos/>} />
           <Route path="/faq" element= {<Faq/>} />
+          <Route path="/login" element= {<Login setIsOn= {setIsOn} Username={Username} setUsername={setUsername} />} />
+          <Route path="/register" element= {<Register/>} />
+          <Route path="/perfil" element= {<UserProfile/>} />
         </Routes>
       </div>
       <Footer/>
@@ -35,4 +47,5 @@ function App() {
 }
 
 export default App
+
 

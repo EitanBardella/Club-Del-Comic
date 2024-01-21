@@ -61,14 +61,14 @@ const Contactos = () => {
                         </form>
                     </div>
                     <div className="contact-info">
-                        <h4>Mas informacion</h4>
+                        <h4 className="contact-h4">Mas informacion</h4>
                         <ul>
                             <li>Baker Street</li>
                             <li>+54123456789</li>
                             <li>contact@website.com</li>
                         </ul>
-                        <p>Tienda especializada en mangas y comics hace 15 años. Somos distribuidor oficial de distintas editoriales. Contamos con distintos medios de pago y envio. Ante cualquier consulta no dudes en contactarnos!!</p>
-                        <p></p>
+                        <p className="contact-p">Tienda especializada en mangas y comics hace 15 años. Somos distribuidor oficial de distintas editoriales. Contamos con distintos medios de pago y envio. Ante cualquier consulta no dudes en contactarnos!!</p>
+                        
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ import {Link, useNavigate} from "react-router-dom"
 
 
 
-const NavBar = ({isOn,Username}) => {
+const NavBar = ({isOn,Username,UserPhoto}) => {
     //
     const navigate = useNavigate()
     const redirect = ()=>{navigate('/perfil')}
@@ -28,7 +28,7 @@ return (
                 </ul>
             </nav>
 
-            <Link  target="_self" className="cta" to="/login"> {isOn ? (<div className="d-flex flex-column justify-content-center align-items-center user"><Link to="/perfil" target="_self" className="user-button" onClick={redirect} > {Username}</Link><img src="../../../public/DefaultPhoto.jpg" alt="DefaultPhot" className="DefaultPhoto" /></div>) : "Inicio de Sesion"} </Link>
+            <Link  target="_self" className="cta" to="/login"> {isOn ? (<div className="d-flex flex-column justify-content-center align-items-center user"><Link to="/perfil" target="_self" className="user-button" onClick={redirect} > {Username}</Link><img src= {UserPhoto} alt="DefaultPhot" className="DefaultPhoto" /></div>) : "Inicio de Sesion"} </Link>
             <Link  target="_self" className="cta" to="/contactos"><button className="Contact-button">Contacto</button></Link>
 
         </header>

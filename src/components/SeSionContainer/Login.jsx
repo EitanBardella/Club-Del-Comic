@@ -6,10 +6,10 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
-import { useEffect } from "react";
 
 
-const Login = ({setIsOn, Username, setUsername}) => {
+
+const Login = ({setIsOn, setUsername,setNombre, setMail}) => {
     //Capturar los datos ingresados
     const {register, handleSubmit} = useForm();
     
@@ -25,8 +25,10 @@ const Login = ({setIsOn, Username, setUsername}) => {
             imageAlt: "Custom image",
         });
     
-        //Luego de la animacion de verificacion de datos se actualiza el Username con el dato ingresado 
+        //Luego de la animacion de verificacion de datos se actualiza el Username con el dato ingresado, lo mismo pero con los otros datos para los demas set
         setUsername(datos.usuario)
+        setNombre(datos.nombre)
+        setMail(datos.email)
         setIsOn(true)
     }
 

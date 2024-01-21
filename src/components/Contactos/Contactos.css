@@ -125,12 +125,12 @@
     .contact .contact-info {
         background-color: #000;
     }
-    .contact .contact-info h4 {
+    .contact .contact-info .contact-h4 {
         text-align: center;
         margin: 0 0 1rem 0;
     }
     @media screen and (min-width: 700px) {
-        .contact .contact-info h4 {
+        .contact .contact-info .contact-h4 {
         text-align: left;
         }
     }
@@ -153,12 +153,12 @@
     .contact .contact-info ul li i {
         padding: 5px;
     }
-    .contact .contact-info p {
+    .contact .contact-info .contact-p {
         text-align: center;
         margin: 0 0 1rem 0;
     }
     @media screen and (min-width: 700px) {
-        .contact .contact-info p {
+        .contact .contact-info .contact-p {
         text-align: left;
         }
     }

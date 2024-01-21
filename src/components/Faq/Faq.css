@@ -8,7 +8,7 @@
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
     background-image: url("../../../public/vagabond-grande.jpg");
-    background-position: center;
+    
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;

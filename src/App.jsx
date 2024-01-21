@@ -11,6 +11,8 @@ import Login from "./components/SesionContainer/Login"
 import Register from "./components/SesionContainer/Register"
 import { useState } from 'react'
 import UserProfile from './components/SesionContainer/UserProfile'
+import DefaultImg from "../public/FotoDefault.jpg"
+import Modal from './components/SesionContainer/Modal'
 
 //Componente Padre renderiza coBmponentes hijos
 function App() {
@@ -24,11 +26,13 @@ function App() {
   //Estado para almacenar el correo
   const [mail, setMail] = useState("")
   //Ambos estados se pasan por props al NavBar y al Login para almacenar el dato y verificar si se inicio sesion
+  //Estado para pasar la foto de perfil
+  const [UserPhoto, setUserPhoto] = useState(DefaultImg)
   return (
     <>
-
-    <BrowserRouter>
-      <NavBar isOn= {isOn} Username={Username}  />
+    <div className="fondoApp">
+    <BrowserRouter >
+      <NavBar isOn= {isOn} Username={Username} UserPhoto = {UserPhoto} />
 
 
       <div className='app'>
@@ -40,12 +44,13 @@ function App() {
           <Route path="/faq" element= {<Faq/>} />
           <Route path="/login" element= {<Login setIsOn= {setIsOn} setUsername={setUsername} setNombre={setNombre} setMail={setMail} />} />
           <Route path="/register" element= {<Register/>} />
-          <Route path="/perfil" element= {<UserProfile nombre = {nombre} mail = {mail} Username={Username} />} />
+          <Route path="/perfil" element= {<UserProfile nombre = {nombre} mail = {mail} Username={Username} UserPhoto={UserPhoto} setUserPhoto = {setUserPhoto} />} />
         </Routes>
       </div>
       <Footer/>
 
       </BrowserRouter>
+      </div>
     </>
   )
 }

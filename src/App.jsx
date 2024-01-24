@@ -12,7 +12,7 @@ import Register from "./components/SesionContainer/Register"
 import { useState } from 'react'
 import UserProfile from './components/SesionContainer/UserProfile'
 import DefaultImg from "../public/FotoDefault.jpg"
-import Modal from './components/SesionContainer/Modal'
+
 
 //Componente Padre renderiza coBmponentes hijos
 function App() {
@@ -32,6 +32,7 @@ function App() {
     <>
     <div className="fondoApp">
     <BrowserRouter >
+      
       <NavBar isOn= {isOn} Username={Username} UserPhoto = {UserPhoto} />
 
 

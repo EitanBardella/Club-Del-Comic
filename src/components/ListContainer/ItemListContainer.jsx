@@ -4,6 +4,7 @@ import pedirProductos from "../../helpers/PedirProducto";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
+import Modal from "../Modal/Modal";
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
@@ -44,7 +45,7 @@ const ItemListContainer = () => {
             ) : (
             <ItemList productos={productos}></ItemList>
             )}
-
+            <Modal/>
         </div>
     );
 };

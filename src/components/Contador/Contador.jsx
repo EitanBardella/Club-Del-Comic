@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import "./Contador.css"
 
 
-const Contador = ({cartfontSize,AfontSize,Item, producto}) => {
+const Contador = ({cartfontSize,AfontSize, producto}) => {
     //Preguntar pq aca no resive Producto?
     const [cantidad, setCantidad]=useState(1);
 
@@ -15,7 +15,7 @@ const Contador = ({cartfontSize,AfontSize,Item, producto}) => {
     }
 
     const sumar=()=>{
-        cantidad < (Item.stock || producto.stock) && setCantidad(cantidad + 1);
+        cantidad < (producto.stock) && setCantidad(cantidad + 1);
         console.log("agregar")
     }
 

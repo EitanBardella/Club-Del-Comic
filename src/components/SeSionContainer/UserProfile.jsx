@@ -1,6 +1,6 @@
 import {useState} from "react"
 import "./UserProfile.css"
-import Modal from "./Modal"
+import Modal from "../Modal/Modal"
 
 const UserProfile = ({Username, nombre, mail, UserPhoto, setUserPhoto}) => {
 

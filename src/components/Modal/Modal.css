@@ -1,9 +1,12 @@
-.selected_photo{
-    width: 110px;
-    height: 110px;
-    /* Hace que la imagen sea redonda */
-    border-radius: 50%;
-    border: 2px solid gray;
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
 }
 
 .modal, .overlay {
@@ -19,7 +22,6 @@
 .overlay {
     background: rgba(49,49,49,0.8);
 }
-
 .modal-content {
     position: absolute;
     top: 40%;
@@ -31,25 +33,13 @@
     border-radius: 3px;
     max-width: 600px;
     min-width: 300px;
+    z-index: 99999;
 }
 
-
-.selection_button{
-    background-color: whitesmoke;
-    margin-top: 20px;
-    margin-left: 50px;
-    width:50%;
-    border: 2px solid black; 
-    border-radius: 20px;
-    font-size: 18px;
-    padding: 3px;
-}
-
-.selection_button:hover{
-    background-color: rgb(134, 189, 203);
-    box-shadow: 0 0 15px #0088a9;
-    box-shadow: 0 0 45px #0088a9;
-
+.pgp{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .close-modal {

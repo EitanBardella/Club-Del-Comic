@@ -2,7 +2,7 @@ import  { useState } from "react";
 import "./Modal.css";
 
 
-const Modal =() => {
+const Modal =({profileTittle,profileContent}) => {
     const [modal, setModal] = useState(false) 
     console.log(modal)
     const toggleModal = () => {
@@ -18,24 +18,24 @@ const Modal =() => {
 
     return (
         <>
-        <button onClick={toggleModal} className="btn-modal">
-            Open
+        <button onClick={toggleModal} className="open-modal">
+            Seleccionar foto de perfil
         </button>
 
-        {modal ? (
-            <div className="modal">
+        {modal && (
+            <div className="modal-profile">
             <div onClick={toggleModal} className="overlay"></div>
             <div className="modal-content">
-                <h2>Hello Modal</h2>
-                {/* <div>
-                    <img className="pgp" src={yui} alt="" />
-                </div> */}
+                <h2>{profileTittle}</h2>
+                
+                {profileContent}
+                
                 <button className="close-modal" onClick={toggleModal}>
                 CLOSE
                 </button>
             </div>
             </div>
-        ): <p>No se muestra nada</p> }
+        )  }
         </>
     );
 }

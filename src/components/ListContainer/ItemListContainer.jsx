@@ -45,7 +45,6 @@ const ItemListContainer = () => {
             ) : (
             <ItemList productos={productos}></ItemList>
             )}
-            <Modal/>
         </div>
     );
 };

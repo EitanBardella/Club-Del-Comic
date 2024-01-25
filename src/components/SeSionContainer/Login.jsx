@@ -44,6 +44,7 @@ const Login = ({setIsOn, setUsername,setNombre, setMail}) => {
         <div className="container d-flex flex-column justify-content-center align-items-center login-container">
             <h2 className="login-header">Inicio de Sesion</h2>
             <div className="login-form d-flex flex-column justify-content-center align-items-center" onSubmit={handleSubmit(enviar)}>
+            {/*Login form*/}
                 <form>
                     <div>
                         <label htmlFor="Nombre Completo">Nombre Completo</label>
@@ -73,6 +74,7 @@ const Login = ({setIsOn, setUsername,setNombre, setMail}) => {
                     
                 </form>
             </div>
+            {/*Register form*/}
             <div className="register-form d-flex flex-column justify-content-center align-items-center">
                 <h4>¿Aun no te has registrado?</h4>
                 <p>Has clic en Registrarse para crear una nueva cuenta</p>

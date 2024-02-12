@@ -2,6 +2,8 @@ import "./NavBar.css"
 import logo from "../../../public/club-comic-logo-1.png"
 import CartWidget from "./CartWidget"
 import {Link, useNavigate} from "react-router-dom"
+import { useContext } from "react"
+import { SesionContext } from "../../Context/SesionContext"
 
 
 
@@ -9,8 +11,10 @@ import {Link, useNavigate} from "react-router-dom"
 
 
 
-const NavBar = ({isOn,Username,UserPhoto}) => {
-    //
+const NavBar = () => {
+    
+    const {isOn,Username,UserPhoto} = useContext(SesionContext)
+
     const navigate = useNavigate()
     const redirect = ()=>{navigate('/perfil')}
     console.log(Username)

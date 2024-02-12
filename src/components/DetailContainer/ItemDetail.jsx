@@ -1,8 +1,7 @@
 import "./ItemDetail.css"
 import Contador from '../Contador/Contador';
-import { useContext,useState } from "react";
+import { useContext } from "react";
 import {CartContext} from "../../Context/CartContext"
-
 
 
 
@@ -14,6 +13,7 @@ const ItemDetail = ({item}) => {
         // Crear un objeto con el producto y la cantidad seleccionada
         const productoAgregado = { ...item, cantidad: contador };
         agregarProducto(productoAgregado);
+        
     }
     
 

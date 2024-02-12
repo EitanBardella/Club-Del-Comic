@@ -1,0 +1,38 @@
+.registerZone{
+    width: 800px;
+    background-color: #9aadbf;
+    border-right: solid 5px black;
+    border-left: solid 5px black;
+    margin: auto;
+    text-align: center;
+}
+
+.constructionTittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+
+.contructionIcon{
+    font-size: 90px;
+    color: rgb(0, 0, 0)
+}
+
+.regretsZone{
+    text-align: center;
+    margin: 20px;
+
+}
+
+.sadIcon{
+    font-size: 35px;
+    margin: 10px;
+}
+
+.imgKaguya{
+    width:476px;
+    height: 602px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}

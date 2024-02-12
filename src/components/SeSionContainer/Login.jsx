@@ -1,15 +1,18 @@
 import { useForm } from "react-hook-form"
 import {Link} from "react-router-dom"
 import "./Login.css"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { SesionContext } from "../../Context/SesionContext";
 
 
 
-const Login = ({setIsOn, setUsername,setNombre, setMail}) => {
+const Login = () => {
+    
+    const {setIsOn, setUsername,setNombre, setMail}= useContext(SesionContext)
     //Capturar los datos ingresados
     const {register, handleSubmit} = useForm();
     
@@ -17,11 +20,11 @@ const Login = ({setIsOn, setUsername,setNombre, setMail}) => {
     const enviar = (datos) => {
         console.log(datos);
         Swal.fire({
-            title: "Sweet!",
-            text: "Modal with a custom image.",
-            imageUrl: "https://unsplash.it/400/200",
+            title: "GENIAL!",
+            text: "Sesion iniciada con exito!",
+            imageUrl: "/Anya.jpeg",
             imageWidth: 400,
-            imageHeight: 200,
+            imageHeight: 400,
             imageAlt: "Custom image",
         });
     

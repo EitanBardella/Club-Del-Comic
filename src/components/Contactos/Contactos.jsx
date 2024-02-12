@@ -13,11 +13,11 @@ const Contactos = () => {
         console.log(datos);
         //Sweet Alert
         Swal.fire({
-            title: "Sweet!",
-            text: "Modal with a custom image.",
-            imageUrl: "https://unsplash.it/400/200",
+            title: "Mensaje enviado con exito!",
+            text: "Tu opinion nos ayuda a mejorar :)",
+            imageUrl: "/chika.jpeg",
             imageWidth: 400,
-            imageHeight: 200,
+            imageHeight: 300,
             imageAlt: "Custom image",
         });
     }

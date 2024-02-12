@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react"
+import {useContext, useEffect, useState} from "react"
 import "./UserProfile.css"
 import Modal from "../Modal/Modal"
+import { SesionContext } from "../../Context/SesionContext"
 
-const UserProfile = ({Username, nombre, mail, UserPhoto, setUserPhoto}) => {
-
+const UserProfile = () => {
+  const {Username, nombre, mail, UserPhoto, setUserPhoto}=useContext(SesionContext)
   //Estado para guardar la Foto seleccionada
   const [foto,setFoto] = useState()
 
@@ -21,6 +22,7 @@ const UserProfile = ({Username, nombre, mail, UserPhoto, setUserPhoto}) => {
     setFoto(path);
     setUserPhoto(path)
     console.log(path);
+    
   }
   
 

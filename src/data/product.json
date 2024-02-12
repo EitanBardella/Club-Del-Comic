@@ -5,8 +5,7 @@
         "nombre":"Naruto Tomo 1",
         "precio": 4000,
         "imagen": "/NarutoTomo1.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
-        "categoria": "comic_manga",
+        "descripcion": "Naruto es una serie de manga escrita e ilustrada por Masashi Kishimoto. La obra narra la historia de un ninja adolescente llamado Naruto Uzumaki, quien aspira a convertirse en Hokage, líder de su aldea, con el propósito de ser reconocido como alguien importante dentro de la aldea y entre sus compañeros.",
         "stock":10
     },
     {
@@ -14,7 +13,7 @@
         "nombre":"Batman 1",
         "precio": 4000 ,
         "imagen": "/BatmanComicPortada.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
+        "descripcion": "Batman es la identidad secreta de Bruce Wayne, un millonario que busca venganza contra el crimen. Para convertirse en Batman, Bruce Wayne invierte sus recursos para mejorarse física y mentalmente.",
         "categoria": "comic_manga",
         "stock":10
     },
@@ -23,7 +22,7 @@
         "nombre":"Batman 2",
         "precio": 4000,
         "imagen": "/BatmanComicPortada2.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
+        "descripcion": "Batman es la identidad secreta de Bruce Wayne, un millonario que busca venganza contra el crimen. Para convertirse en Batman, Bruce Wayne invierte sus recursos para mejorarse física y mentalmente.",
         "categoria": "comic_manga",
         "stock":10
     },
@@ -32,7 +31,7 @@
         "nombre":"Funko Killua",
         "precio": 4000 ,
         "imagen": "/FunkoKillua.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
+        "descripcion": "Es el mejor amigo de Gon Freecss y actualmente viaja con Alluka Zoldyck. Killua tiene cabello plateado puntiagudo, piel muy pálida y ojos azules. Sus ojos cambian de forma dependiendo del estado de ánimo en el que se encuentre, estrechándose y agudizándose cuando entra en modo de asesinato.",
         "categoria": "merchandising",
         "stock":10
     },
@@ -41,7 +40,7 @@
         "nombre":"Funko Wall-e",
         "precio": 4000,
         "imagen": "/FunkoWall-e.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
+        "descripcion": "Wall-E es un oxidado y viejo robot, que vive solo en la Tierra junto a su cucaracha Hal. Este Funko de 9cm de tamaño representa a Wall-E con cara de pena y con una bota con una planta dentro sujetándolo con sus manos. No te quedes sin el Funko Pop Wall-E 400.",
         "categoria": "merchandising",
         "stock":10
     },
@@ -50,7 +49,7 @@
         "nombre":"Funko Wall-e",
         "precio": 4000,
         "imagen": "/FunkoWall-e.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
+        "descripcion": "Wall-E es un oxidado y viejo robot, que vive solo en la Tierra junto a su cucaracha Hal. Este Funko de 9cm de tamaño representa a Wall-E con cara de pena y con una bota con una planta dentro sujetándolo con sus manos. No te quedes sin el Funko Pop Wall-E 400.",
         "categoria": "merchandising",
         "stock":10
     },
@@ -59,7 +58,7 @@
         "nombre":"Funko Wall-e",
         "precio": 4000,
         "imagen": "/FunkoWall-e.jpg",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit animi eligendi eaque minima exercitationem atque consequuntur quam deleniti ex, cumque quae sit sed blanditiis vero in veritatis dignissimos officia nesciunt.",
+        "descripcion": "Wall-E es un oxidado y viejo robot, que vive solo en la Tierra junto a su cucaracha Hal. Este Funko de 9cm de tamaño representa a Wall-E con cara de pena y con una bota con una planta dentro sujetándolo con sus manos. No te quedes sin el Funko Pop Wall-E 400.",
         "categoria": "merchandising",
         "stock":10
     }

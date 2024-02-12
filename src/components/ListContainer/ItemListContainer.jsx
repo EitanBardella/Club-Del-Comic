@@ -1,10 +1,11 @@
 import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
-import pedirProductos from "../../helpers/PedirProducto";
+// import pedirProductos from "../../helpers/PedirProducto";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
-
+import { collection, getDocs, query, where} from "firebase/firestore";
+import db from "../../db/db";
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
@@ -12,27 +13,38 @@ const ItemListContainer = () => {
     const { categoria } = useParams();
 
     useEffect(() => {
-        
-        const fetchData = () => {
-        setCargando(true);
 
-        pedirProductos().then((rta) => {
-            if (categoria) {
-            const prodsFiltrados = rta.filter(
-                (producto) => producto.categoria === categoria
-            );
-            setProductos(prodsFiltrados);
-            } else {
-            setProductos(rta);
-            }
+        
+        let consulta //Inicia vacio
+
+        //El primer argumento es la base de datos y el segundo el nombre de la coleccion
+        let productosRef = collection(db, "productos")
+        //El filtro de categoria es con query y where
+
+        if(categoria){
+            //Filtrar data
+            //query es donde va a consultar, y where que datos traer
+            consulta=query( productosRef, where( "categoria", "==", categoria ) )
+        }else{
+            //Devolver Todo
+            consulta= productosRef
+        }
+        getDocs(consulta)
+        .then((rta) => {
+            let productosDb = rta.docs.map((prod) => {
+                return { id: prod.id, ...prod.data() };
+            });
+            setProductos(productosDb);
             //Simular mas tiempo de carga
             setTimeout(() => {
                 setCargando(false);
             }, 2000);
+            console.log(productosDb);
+        })
+        .catch((error) => {
+            console.log("Error:", error);
         });
-        };
-
-        fetchData();
+    
     }, [categoria]);
 
     return (
@@ -51,44 +63,3 @@ const ItemListContainer = () => {
 
 export default ItemListContainer;
 
-
-
-
-
-// useEffect(() => {
-//     pedirProductos()
-//     //En rta esta el array de productos traido con la promesa
-//     .then((rta)=>{
-//         if(categoria){
-//             //Filtrar los productos que coincidan
-//             //Filter=> Por cada iteracion me devuelve un producto
-//             const prodsFiltrados = rta.filter((producto) => producto.categoria === categoria)
-//             //Se guarda los prods filtrados en la funcion de estado
-//             setProductos(prodsFiltrados)
-//         } else{
-//             //Mostrar la lista sin cambios
-//             setProductos(rta)
-//         }
-//     })
-//     .finally (()=> {
-//         setCargando(false)
-//     })
-// }, [categoria])
-
-
-
-
-// return (
-//     <div className="container d-flex justify-content-center align-items-center">
-//         {productos.length > 0 ? (
-//             <ItemList productos={productos}></ItemList>
-//         ) : (
-//             <div className="cargandoBox" >
-                
-//                 <ClockLoader color="#ff005c" loading margin={10} size={100} speedMultiplier={1.25}/>
-//                 <p className="cargando">Tren Roca viene con Demoras</p>
-//             </div>
-//         )}
-//     </div>
-// );
-// };

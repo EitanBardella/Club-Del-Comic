@@ -1,33 +1,14 @@
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { ImCross } from "react-icons/im";
-import Swal from 'sweetalert2';
-import 'sweetalert2/dist/sweetalert2.min.css';
+
 
 import "./Carrito.css"
+import { Link } from "react-router-dom";
 
 const Carrito = () => {
   const { cart, clearProducto, clear, precioTotal,} = useContext(CartContext);
 
-const pagar = () => {
-  Swal.fire({
-    title: "Estas seguro?",
-    text: "No vas a poder revertirlo!",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Estoy Seguro!"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: "GENIAL!",
-        text: "Tu compra fue realizada con exito",
-        icon: "success"
-      });
-    }
-  });
-};
 
   return (
     <div className="cartView" >
@@ -52,7 +33,7 @@ const pagar = () => {
 
         <div className="viewButton">
           <button onClick={clear}>Limpiar Carrito</button>
-          <button onClick={pagar}>PAGAR</button>
+          <Link to="/pagar" target="_self"><button>PAGAR</button></Link>
         </div>
       </div>
     </div>

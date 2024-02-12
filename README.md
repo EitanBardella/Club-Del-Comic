@@ -13,6 +13,7 @@ This project represents the final project for the React course on the CoderHouse
 - Send mensagges as feedback.
 - Navigate between the different pages
 
+
 ## Tech Stack
 - JavaScript
 - HTML

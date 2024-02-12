@@ -24,16 +24,16 @@ const Modal =({profileTittle,profileContent}) => {
 
         {modal && (
             <div className="modal-profile">
-            <div onClick={toggleModal} className="overlay"></div>
-            <div className="modal-content">
-                <h2>{profileTittle}</h2>
-                
-                {profileContent}
-                
-                <button className="close-modal" onClick={toggleModal}>
-                CLOSE
-                </button>
-            </div>
+                <div onClick={toggleModal} className="overlay"></div>
+                <div className="modal-content">
+                    <h2>{profileTittle}</h2>
+                    
+                    {profileContent}
+                    
+                    <button className="close-modal" onClick={toggleModal}>
+                    CLOSE
+                    </button>
+                </div>
             </div>
         )  }
         </>

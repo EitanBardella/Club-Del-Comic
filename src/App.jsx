@@ -12,11 +12,20 @@ import Register from "./components/SesionContainer/Register"
 import { useState } from 'react'
 import UserProfile from './components/SesionContainer/UserProfile'
 import DefaultImg from "../public/FotoDefault.jpg"
+import { CartProvider} from './Context/CartContext'
+import Carrito from './components/Carrito/Carrito'
 
 
 //Componente Padre renderiza coBmponentes hijos
 function App() {
   
+
+
+  
+
+
+
+
   //Revision para ver si el usuario esta o no Iniciado
   const [isOn, setIsOn] = useState(false)
   //Estado para almacenar el nombre de usuario
@@ -30,28 +39,30 @@ function App() {
   const [UserPhoto, setUserPhoto] = useState(DefaultImg)
   return (
     <>
-    <div className="fondoApp">
-    <BrowserRouter >
-      
-      <NavBar isOn= {isOn} Username={Username} UserPhoto = {UserPhoto} />
+
+      <div></div>
+      <BrowserRouter >
+        <CartProvider>
+          <NavBar isOn= {isOn} Username={Username} UserPhoto = {UserPhoto} />
 
 
-      <div className='app'>
-        <Routes>
-          <Route path="/" element= {<ItemListContainer/>} />
-          <Route path="/productos/:categoria" element= {<ItemListContainer/>} />
-          <Route path="/item/:id" element= {<ItemDetailContainer />} />
-          <Route path="/contactos" element= {<Contactos/>} />
-          <Route path="/faq" element= {<Faq/>} />
-          <Route path="/login" element= {<Login setIsOn= {setIsOn} setUsername={setUsername} setNombre={setNombre} setMail={setMail} />} />
-          <Route path="/register" element= {<Register/>} />
-          <Route path="/perfil" element= {<UserProfile nombre = {nombre} mail = {mail} Username={Username} UserPhoto={UserPhoto} setUserPhoto = {setUserPhoto} />} />
-        </Routes>
-      </div>
-      <Footer/>
-
+          <div className='app'>
+            <Routes>
+              <Route path="/" element= {<ItemListContainer/>} />
+              <Route path="/productos/:categoria" element= {<ItemListContainer/>} />
+              <Route path="/item/:id" element= {<ItemDetailContainer />} />
+              <Route path="/contactos" element= {<Contactos/>} />
+              <Route path="/faq" element= {<Faq/>} />
+              <Route path="/login" element= {<Login setIsOn= {setIsOn} setUsername={setUsername} setNombre={setNombre} setMail={setMail} />} />
+              <Route path="/register" element= {<Register/>} />
+              <Route path="/perfil" element= {<UserProfile nombre = {nombre} mail = {mail} Username={Username} UserPhoto={UserPhoto} setUserPhoto = {setUserPhoto} />} />
+              <Route path='/carrito' element={<Carrito/>} />
+            </Routes>
+          </div>
+          <Footer/>
+        </CartProvider>
       </BrowserRouter>
-      </div>
+
     </>
   )
 }

@@ -44,6 +44,7 @@ header .navegacion {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+
 }
 header .logo {
     cursor: pointer;
@@ -56,6 +57,17 @@ header .nav_links li {
     display: inline-block;
     padding: 0 20px;
 }
+
+/* Estilos para el componente CartWidget */
+header .nav_links li .alfa .navegacion {
+    color: #fdfdfd;
+    transition: all 0.3s ease 0s;
+}
+header .nav_links li .alfa .navegacion:hover {
+    color: #0088a9;
+}
+
+
 header .nav_links li a {
     color: #fdfdfd;
     transition: all 0.3s ease 0s;

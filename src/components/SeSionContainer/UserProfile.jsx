@@ -15,12 +15,12 @@ const UserProfile = ({Username, nombre, mail, UserPhoto, setUserPhoto}) => {
   }, [foto]);
 
   // Funcion para seleccionar la foto
-  const selectedFoto = (e) => {
+  const selectedFoto = (path) => {
     // Extraer la ruta de la imagen del botón seleccionado
-    const selectedImagePath = e.currentTarget.firstChild.src;
-    setFoto(selectedImagePath);
-    setUserPhoto(foto)
-    console.log(foto);
+
+    setFoto(path);
+    setUserPhoto(path)
+    console.log(path);
   }
   
 
@@ -38,9 +38,9 @@ const UserProfile = ({Username, nombre, mail, UserPhoto, setUserPhoto}) => {
           profileContent={ 
             <>
               <div className="profile-div">
-                <button className="pgpFoto" onClick={selectedFoto}><img src="/YuiLogo.jpg"  alt="Yui Logo" className="pgp"/></button>
-                <button className="pgpFoto" onClick={selectedFoto}><img src="/MuiLogo.jpg" className="pgp"/></button>
-                <button className="pgpFoto" onClick={selectedFoto}><img src="/MiaAkiyama.jpg" className="pgp"/></button>
+                <button className="pgpFoto" onClick={()=> selectedFoto("/YuiLogo.jpg")}><img src="/YuiLogo.jpg"  alt="Yui Logo" className="pgp"/></button>
+                <button className="pgpFoto" onClick={()=> selectedFoto("/MuiLogo.jpg")}><img src="/MuiLogo.jpg" className="pgp"/></button>
+                <button className="pgpFoto" onClick={()=> selectedFoto("/MiaAkiyama.jpg")}><img src="/MiaAkiyama.jpg" className="pgp"/></button>
               </div>
             </>
             } 

@@ -7,6 +7,8 @@ import {Link, useNavigate} from "react-router-dom"
 
 
 
+
+
 const NavBar = ({isOn,Username,UserPhoto}) => {
     //
     const navigate = useNavigate()
@@ -24,7 +26,7 @@ return (
                     <li className="li"><Link className="navegacion" target="_self" to="/productos/comic_manga">Comic y manga</Link></li>
                     <li className="li"><Link className="navegacion" target="_self" to="/productos/merchandising">Merchandising</Link></li>
                     <li className="li"><Link className="navegacion" target="_self" to="/faq">FAQ</Link></li>
-                    <li className="li"><Link id="showCart" className="navegacion" target="_self" to="#"><CartWidget cantidad={1}/></Link></li>
+                    <li className="li"><CartWidget className="navegacion alfa"/></li>
                 </ul>
             </nav>
 

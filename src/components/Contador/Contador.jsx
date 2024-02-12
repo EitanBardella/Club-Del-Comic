@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Button from 'react-bootstrap/Button';
 import "./Contador.css"
+import { CartContext } from "../../Context/CartContext";
 
 
-const Contador = ({cartfontSize,AfontSize, producto}) => {
+const Contador = ({cartfontSize,AfontSize, producto,agregar}) => {
     //Preguntar pq aca no resive Producto?
     const [cantidad, setCantidad]=useState(1);
 
-
+    // const {cart, setCart} = useContext(CartContext);
+    // console.log(cart)
 
     const restar=()=>{
         cantidad > 1 && setCantidad(cantidad - 1);
@@ -24,7 +26,7 @@ const Contador = ({cartfontSize,AfontSize, producto}) => {
     return (
     <div className="Container">
 
-        <Button variant="danger" style={{ fontSize: `${cartfontSize}px` }} >AGREGAR AL CARRITO</Button>
+        <Button variant="danger" onClick={()=>agregar(cantidad)} style={{ fontSize: `${cartfontSize}px` }} >AGREGAR AL CARRITO</Button>
         <div className="Container-btns">
             <Button variant="light" onClick={sumar}  style={{ fontSize: `${AfontSize}px` }} > Agregar </Button>
             <h4 className="cantidad" > {cantidad} </h4>

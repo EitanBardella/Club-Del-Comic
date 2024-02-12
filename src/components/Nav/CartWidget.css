@@ -1,4 +1,21 @@
+.cartt{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #fdfdfd;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.cartt:hover {
+    /* Estilos al pasar el mouse por encima */
+    color: #0088a9;
+}
 .cart{
     width: 22px;
     height: 22px;
+}
+.cart p {
+    color: white;
+    text-decoration: none;
+    outline: none;
 }

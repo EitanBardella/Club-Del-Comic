@@ -39,7 +39,7 @@ const ItemListContainer = () => {
             setTimeout(() => {
                 setCargando(false);
             }, 2000);
-            console.log(productosDb);
+
         })
         .catch((error) => {
             console.log("Error:", error);

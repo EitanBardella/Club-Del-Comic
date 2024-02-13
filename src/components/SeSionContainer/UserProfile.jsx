@@ -10,7 +10,6 @@ const UserProfile = () => {
 
   useEffect(() => {
     // Operaciones adicionales después de que foto se actualiza
-    console.log("Foto actualizada:", foto);
 
     // Funciona con 2 clicks nose pq
   }, [foto]);
@@ -21,7 +20,6 @@ const UserProfile = () => {
 
     setFoto(path);
     setUserPhoto(path)
-    console.log(path);
     
   }
   

@@ -18,7 +18,6 @@ const Login = () => {
     
 
     const enviar = (datos) => {
-        console.log(datos);
         Swal.fire({
             title: "GENIAL!",
             text: "Sesion iniciada con exito!",

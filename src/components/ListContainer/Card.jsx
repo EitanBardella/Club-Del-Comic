@@ -21,7 +21,7 @@ const Card = ({producto}) => {
       <div className="card-body">
         <h4 className="card-tittle"><Link to={`/Item/${producto.id} `} className='Link'>{producto.nombre}</Link></h4>
         <p className="card-text">{producto.precio}$</p>
-        <Contador producto={producto} cartfontSize={20} AfontSize={18} agregar={agregar}/>
+        <Contador producto={producto} cartfontSize={20} afontSize={18} agregar={agregar}/>
         
       </div>
     </div>

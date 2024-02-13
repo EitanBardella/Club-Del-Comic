@@ -17,7 +17,6 @@ const NavBar = () => {
 
     const navigate = useNavigate()
     const redirect = ()=>{navigate('/perfil')}
-    console.log(Username)
 
 
 // Se pasan por props los dato si el usuario inicio o no la sesion para que se verifique la condicion y aparezca lo que corresponde

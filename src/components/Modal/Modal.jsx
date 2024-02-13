@@ -7,7 +7,7 @@ const Modal =({profileTittle,profileContent}) => {
     console.log(modal)
     const toggleModal = () => {
         setModal(!modal);
-        console.log(modal)
+
     };
 
     if(modal) {

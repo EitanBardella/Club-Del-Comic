@@ -9,7 +9,7 @@ const Itemfaq = ( {pregunta, respuesta} ) => {
     const refHeight = useRef()
 
     useEffect(() => {
-        console.log(refHeight);
+
         setHeightEl(`${refHeight.current.scrollHeight}px`)
     }, [])
 
@@ -17,7 +17,7 @@ const Itemfaq = ( {pregunta, respuesta} ) => {
         setToggle(!toggle)
     }
 
-    console.log(toggle);
+
     return (
         <div className="accordion">
                 <button onClick={toggleState} className="accordion-visible">

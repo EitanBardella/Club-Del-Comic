@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
                             <p className='descripcion'>{item.descripcion}</p>
                             <p className='precio'>{item.precio} $</p>
                             <div className='cont'>
-                                <Contador agregar={agregar} producto = {item} cartfontSize={30} AfontSize={25} />
+                                <Contador agregar={agregar} producto = {item} cartfontSize={30} afontSize={25} />
                                 {/*La prop tiene el mismo nombre, pero distinto valor*/}
                             </div>
 

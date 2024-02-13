@@ -9,8 +9,7 @@ const Contactos = () => {
     //Capturar los datos ingresados
     const {register, handleSubmit} = useForm();
 
-    const enviar = (datos) => {
-        console.log(datos);
+    const enviar = () => {
         //Sweet Alert
         Swal.fire({
             title: "Mensaje enviado con exito!",

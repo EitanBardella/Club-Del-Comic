@@ -1,1 +1,8 @@
-dasdsada
+[build]
+  command = "npm run build"
+  publish = "dist"
+  branch = "main"
+
+
+
+

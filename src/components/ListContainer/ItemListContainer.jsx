@@ -13,52 +13,60 @@ const ItemListContainer = () => {
 
     useEffect(() => {
 
-        
-        let consulta //Inicia vacio
+        // Función asincrónica para obtener los productos de Firebase
+        const fetchData = async () => {
+            try {
+                let consulta;
+                let productosRef = collection(db, "productos");
 
-        //El primer argumento es la base de datos y el segundo el nombre de la coleccion
-        let productosRef = collection(db, "productos")
-        //El filtro de categoria es con query y where
+                // Si hay una categoría definida, se filtran los productos por esa categoría
+                if(categoria) {
+                    consulta = query(productosRef, where("categoria", "==", categoria));
+                } else {
+                    // Si no hay categoría definida, se obtienen todos los productos
+                    consulta = productosRef;
+                }
 
-        if(categoria){
-            //Filtrar data
-            //query es donde va a consultar, y where que datos traer
-            consulta=query( productosRef, where( "categoria", "==", categoria ) )
-        }else{
-            //Devolver Todo
-            consulta= productosRef
-        }
-        getDocs(consulta)
-        .then((rta) => {
-            let productosDb = rta.docs.map((prod) => {
-                return { id: prod.id, ...prod.data() };
-            });
-            setProductos(productosDb);
-            //Simular mas tiempo de carga
-            setTimeout(() => {
+                // Se realiza la consulta a Firebase y se espera la respuesta
+                const querySnapshot = await getDocs(consulta);
+
+                // Se mapea el resultado de la consulta para obtener los datos de cada producto
+                let productosDb = querySnapshot.docs.map((prod) => ({
+                    id: prod.id,
+                    ...prod.data()
+                }));
+
+                // Se actualiza el estado con los productos obtenidos
+                setProductos(productosDb);
+                // Se indica que la carga ha finalizado
                 setCargando(false);
-            }, 2000);
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        };
 
-        })
-        .catch((error) => {
-            console.log("Error:", error);
-        });
+        // Se llama a la función para obtener los productos cuando cambia la categoría
+        fetchData();
     
     }, [categoria]);
 
     return (
         <div className="container d-flex justify-content-center align-items-center">
             {cargando ? (
-            <div className="cargandoBox">
-                <ClockLoader color="#ff005c" loading margin={10} size={100} speedMultiplier={1.25} />
-                <p className="cargando">Tren Roca viene con Demoras</p>
-            </div>
+                // Muestra un spinner de carga mientras se cargan los productos
+                <div className="cargandoBox">
+                    <ClockLoader color="#ff005c" loading margin={10} size={100} speedMultiplier={1.25} />
+                    <p className="cargando">Tren Roca viene con Demoras</p>
+                </div>
             ) : (
-            <ItemList productos={productos}></ItemList>
+                // Muestra la lista de productos una vez que se han cargado
+                <ItemList productos={productos}></ItemList>
             )}
         </div>
     );
 };
 
 export default ItemListContainer;
+
+
 

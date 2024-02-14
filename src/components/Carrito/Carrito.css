@@ -82,4 +82,37 @@
     border-radius: 15px;
 }
 
+.emptyCart{
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.emptyCartTitle{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.emptyCart h1{
+  font-size: 60px;
+}
+
+
+.emptyCartImg{
+  width:476px;
+  height: 602px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.sadiconCart{
+  font-size: 70px;
+}
+
+
 

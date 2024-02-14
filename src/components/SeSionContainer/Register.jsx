@@ -14,7 +14,7 @@ const Register = () => {
                 <h2>Disculpe las molestias </h2>
                 <ImSad2 className="sadIcon"/>
             </div>
-            <img className="imgKaguya" src="/kaguya.jpeg" alt="kaguya" />
+            <img className="imgKaguya" src="/constuccion.jpeg" alt="kaguya" />
         </div>
     )
 }

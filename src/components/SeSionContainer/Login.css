@@ -60,3 +60,20 @@
     margin-top: 37px;
     margin-bottom: 35px;
 }
+
+.registerButton{
+    padding: 10px;
+    margin-top: 40px;
+    font-size: 17px;
+    border: 2px black solid;
+    border-radius: 20px;
+}
+.registerSubtitle{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.registerTitle{
+    font-size: 28px;
+    margin: 5px;
+}

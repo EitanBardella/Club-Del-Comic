@@ -7,9 +7,18 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 const Contactos = () => {
 
     //Capturar los datos ingresados
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit,reset} = useForm();
 
-    const enviar = () => {
+    const enviar = (datos) => {
+
+        if (!datos.nombre || !datos.email || !datos.telefono || !datos.motivo|| !datos.mensaje) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor completa todos los campos',
+            });
+            return; // Salir de la función si algún campo está vacío
+        }
         //Sweet Alert
         Swal.fire({
             title: "Mensaje enviado con exito!",
@@ -18,6 +27,9 @@ const Contactos = () => {
             imageWidth: 400,
             imageHeight: 300,
             imageAlt: "Custom image",
+        }).then(() => {
+            // Resetear el formulario después de mostrar el mensaje de éxito
+            reset();
         });
     }
 

@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 import "./Login.css"
 import { useContext, useState } from "react";
 import { FaEyeSlash } from "react-icons/fa6";
@@ -15,24 +15,37 @@ const Login = () => {
     const {setIsOn, setUsername,setNombre, setMail}= useContext(SesionContext)
     //Capturar los datos ingresados
     const {register, handleSubmit} = useForm();
-    
-
+    const navigateLog = useNavigate()
     const enviar = (datos) => {
+        if (!datos.nombre || !datos.email || !datos.usuario || !datos.contraseña) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor completa todos los campos',
+            });
+            return; // Salir de la función si algún campo está vacío
+        }
+    
         Swal.fire({
             title: "GENIAL!",
-            text: "Sesion iniciada con exito!",
+            text: "Sesión iniciada con éxito!",
             imageUrl: "/Anya.jpeg",
             imageWidth: 400,
             imageHeight: 400,
             imageAlt: "Custom image",
         });
     
-        //Luego de la animacion de verificacion de datos se actualiza el Username con el dato ingresado, lo mismo pero con los otros datos para los demas set
-        setUsername(datos.usuario)
-        setNombre(datos.nombre)
-        setMail(datos.email)
-        setIsOn(true)
+        // Luego de la animación de verificación de datos se actualiza el Username con el dato ingresado, lo mismo pero con los otros datos para los demás set
+        setUsername(datos.usuario);
+        setNombre(datos.nombre);
+        setMail(datos.email);
+        setIsOn(true);
+
+        //Redirigin a la pagina principal
+        navigateLog('/')
     }
+    
+
 
     //Toggle para mostrar y ocultar el texto de contraseña
     const [verContraseña, setVerContraseña] = useState(false)
@@ -78,9 +91,9 @@ const Login = () => {
             </div>
             {/*Register form*/}
             <div className="register-form d-flex flex-column justify-content-center align-items-center">
-                <h4>¿Aun no te has registrado?</h4>
-                <p>Has clic en Registrarse para crear una nueva cuenta</p>
-                <Link target="_self" className="cta" to="/register"><button>Registrarse</button></Link>
+                <h4 className="registerTitle" >¿Aun no te has registrado?</h4>
+                <p className="registerSubtitle">Has clic en Registrarse para crear una nueva cuenta</p>
+                <Link target="_self" className="cta" to="/register"><button className="registerButton" >Registrarse</button></Link>
             </div>
         </div>
 

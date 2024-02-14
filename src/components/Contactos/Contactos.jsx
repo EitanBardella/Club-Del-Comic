@@ -2,42 +2,9 @@ import { useForm } from "react-hook-form"
 import "./Contactos.css"
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
-// import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-// import db from "../../db/db";
 
 const Contactos = () => {
 
-        // // Capturar los datos ingresados utilizando react-hook-form
-        // const { register, handleSubmit, reset } = useForm();
-
-        // const enviar = async (datos) => {
-        //     try {
-        //         // Enviar los datos a Firestore
-        //         await addDoc(collection(db, "contactos"), {
-        //             nombre: datos.nombre,
-        //             email: datos.email,
-        //             telefono: datos.telefono,
-        //             motivo: datos.motivo,
-        //             mensaje: datos.mensaje,
-        //             timestamp: serverTimestamp()
-        //         });
-    
-        //         // Mostrar un mensaje de éxito utilizando SweetAlert2
-        //         Swal.fire({
-        //             title: "Mensaje enviado con éxito!",
-        //             text: "Tu opinión nos ayuda a mejorar :)",
-        //             imageUrl: "/chika.jpeg",
-        //             imageWidth: 400,
-        //             imageHeight: 300,
-        //             imageAlt: "Custom image",
-        //         }).then(() => {
-        //             // Resetear el formulario después de mostrar el mensaje de éxito
-        //             reset();
-        //         });
-        //     } catch (error) {
-        //         console.error("Error al enviar el formulario:", error);
-        //     }
-        // };
 
 
     //Capturar los datos ingresados

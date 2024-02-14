@@ -1,6 +1,5 @@
 import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
-// import pedirProductos from "../../helpers/PedirProducto";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { ClockLoader } from "react-spinners";

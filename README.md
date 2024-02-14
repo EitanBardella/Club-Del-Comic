@@ -56,3 +56,5 @@ We welcome contributions from the community! Please submit a pull request with y
 I hope this helps! Let me know if you have any questions or need further assistance.
 
 ## I hope you enjoy using Club del Comic!
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da8a9157-7e0c-42d6-b1a2-ad50cf09acc3/deploy-status)](https://app.netlify.com/sites/club-del-comic/deploys)
